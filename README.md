@@ -13,13 +13,16 @@ données.
 
 ## Table de matière
 
-- [Démarrer Zookeeper](#Démarrer Zookeeper)
-- [Démarrer Kafka-server](#Démarrer Kafka-server)
-- [Tester avec Kafka-console-producer et kafka-console-consumer](#Tester avec Kafka-console-producer et kafka-console-consumer)
+- [Démarrer Zookeeper](#DémarrerZookeeper)
+- [Démarrer Kafka-server](#DémarrerKafka-server)
+- [Tester avec Kafka-console-producer et kafka-console-consumer](#TesteravecKafka-console-produceretkafka-console-consumer)
 - [Avec Docker](#AvecDocker)
 - [Avec KAFKA & Spring Cloud Streams](#AvecKAFKA&StpringCloudStreams)
   
-![Architecture](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/Architecture.png)
+<div align="center">
+  <img src="https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/Architecture.png" alt="Architecture">
+</div>
+
 ## Démarrer Zookeeper
 
 Après le téléchargement du Kafka on va démarrer zookeeper qui est utilisé comme composant de base pour la gestion des brokers Kafka
@@ -29,9 +32,11 @@ Pour le démarrer, on va exécuter la commande suivante :
 ```shell
 start bin\windows\zookeeper-server-start.bat config/zookeeper.properties
 ```
-![zookeeper](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/StartZookeeper.png)
+<div align="center">
+  <img src="https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/StartZookeeper.png" alt="Zookeeper">
+</div>
 
-Zookeeper, maintenant, est démarré sur le port 2181 :
+Zookeeper, maintenant, est démarré sur le port 2181
 
 ## Démarrer Kafka-server
 
@@ -65,24 +70,29 @@ pour envoyer des messages au topic nommé R1
 start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1
 ```
 
-Alors le consommateur attend les messages envoyés vers le topic <br/><br/>
-![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/nTestWithConsoleConsumer.png)
-
 ## Avec Docker
 
 * Créer le fichier docker-compose.yml
 
-![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/dockerComposeFile.png)
+<div align="center">
+  <img src="https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/dockerComposeFile.png" alt="dcker-compose">
+</div>
 
 * Démarrer les conteneurs docker : zookeeper et kafka-broker
 
-![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/RunContainers.png)
+<div align="center">
+  <img src="https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/RunContainers.png" alt="containers">
+</div>
 
 * Tester avec Kafka-console-producer et kafka-console-consumer
 
-![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/KafkaConsoleConsumerWithDocker.png)
+<div align="center">
+  <img src="https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/KafkaConsoleConsumerWithDocker.png" alt="kafka-console-consumer">
+</div>
 
-![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/KafkaConsoleProducerWityhDocker.png)
+<div align="center">
+  <img src="https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/KafkaConsoleProducerWityhDocker.png" alt="kafka-console-producer">
+</div>
 
 ## Avec KAFKA & Stpring Cloud Streams
 
