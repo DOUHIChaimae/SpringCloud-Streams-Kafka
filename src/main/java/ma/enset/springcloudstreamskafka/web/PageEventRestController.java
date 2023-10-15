@@ -41,7 +41,8 @@ public class PageEventRestController {
         return Flux.interval(Duration.ofSeconds(1))
                 .map(seq -> {
                     Map<String, Long> stringLongMap = new HashMap<>();
-                    ReadOnlyWindowStore<String, Long> windowStore = interactiveQueryService.getQueryableStore("page-count", QueryableStoreTypes.windowStore());
+                    ReadOnlyWindowStore<String, Long> windowStore = interactiveQueryService.getQueryableStore("page-count",
+                            QueryableStoreTypes.windowStore());
                     Instant now = Instant.now();
                     Instant from = now.minusMillis(5000);
                     KeyValueIterator<Windowed<String>, Long> fetchAll = windowStore.fetchAll(from, now);

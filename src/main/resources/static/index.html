@@ -27,7 +27,7 @@ pages.forEach(function (v) {
     col = randomColor();
     smoothieChart.addTimeSeries(courbe[v], {strokeStyle: col.sroke, fillStyle: col.fill, lineWidth: 2});
 });
-var stockEventSource = new EventSource("/analyticsAggregate");
+var stockEventSource = new EventSource("/analytics");
 stockEventSource.addEventListener("message", function (event) {
     pages.forEach(function (v) {
         val = JSON.parse(event.data)[v];
