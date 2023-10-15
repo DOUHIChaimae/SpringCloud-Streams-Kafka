@@ -25,7 +25,7 @@ données.
 
 ## Démarrer Zookeeper
 
-Après le téléchargement du Kafka on va démarrer zookeeper qui est utilisé comme composant de base pour la gestion des brokers Kafka
+Après le téléchargement du Kafka, on va démarrer zookeeper qui est utilisé comme composant de base pour la gestion des brokers Kafka
 
 Pour le démarrer, on va exécuter la commande suivante :
 
@@ -49,22 +49,16 @@ Après l'exécution de la commande, Kafka va écouter sur l'adresse IP 0.0.0.0 e
 ## Tester avec Kafka-console-producer et kafka-console-consumer
 * kafka-console-consumer
 
-L'utilitaire kafka-console-consumer est utilisé pour consommer des messages à partir d'un topic Kafka à partir de la
-ligne de commande.
+L'utilitaire **kafka-console-consumer** est utilisé pour consommer des messages à partir d'un topic Kafka à partir de la ligne de commande.
 
-On va démarrer notre consommateur de console Kafka sur un système Windows, le configurer pour se connecter à un broker
-Kafka sur localhost:9092 et lui indique de lire les messages du topic R1 en éxécutant la commande : 
+On va démarrer notre consommateur de console Kafka sur un système Windows, le configurer pour se connecter à un broker Kafka sur localhost:9092 et lui indique de lire les messages du topic R1 en éxécutant la commande : 
 ```shell
 start bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R1
 ```
 
 * kafka-console-producer
 
-L'utilitaire kafka-console-producer est utilisé pour produire (envoyer) des messages vers un topic Kafka à partir de la
-ligne de commande.
-
-Comme la commande montre, ce producteur doit se connecter au brokers Kafka fonctionnant sur localhost sur le port 9092
-pour envoyer des messages au topic nommé R1
+L'utilitaire ** kafka-console-producer** est utilisé pour produire des messages vers un topic Kafka à partir de la ligne de commande.
 <br/><br/>
 ```shell
 start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1
