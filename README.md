@@ -16,10 +16,10 @@ données.
 - [Démarrer Zookeeper](#Démarrer Zookeeper)
 - [Démarrer Kafka-server](#Démarrer Kafka-server)
 - [Tester avec Kafka-console-producer et kafka-console-consumer](#Tester avec Kafka-console-producer et kafka-console-consumer)
-- [Avec Docker](#Avec Docker)
+- [Avec Docker](#AvecDocker)
 - [Avec KAFKA & Spring Cloud Streams](#AvecKAFKA&StpringCloudStreams)
   
-![Architecture](.jpg)
+![Architecture](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/Architecture.png)
 ## Démarrer Zookeeper
 
 Après le téléchargement du Kafka on va démarrer zookeeper qui est utilisé comme composant de base pour la gestion des brokers Kafka
@@ -29,7 +29,7 @@ Pour le démarrer, on va exécuter la commande suivante :
 ```shell
 start bin\windows\zookeeper-server-start.bat config/zookeeper.properties
 ```
-![zookeeper](.jpg)
+![zookeeper](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/StartZookeeper.png)
 
 Zookeeper, maintenant, est démarré sur le port 2181 :
 
@@ -66,23 +66,23 @@ start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topi
 ```
 
 Alors le consommateur attend les messages envoyés vers le topic <br/><br/>
-![image](.jpg)
+![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/nTestWithConsoleConsumer.png)
 
 ## Avec Docker
 
 * Créer le fichier docker-compose.yml
 
-![image](.jpg)
+![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/dockerComposeFile.png)
 
 * Démarrer les conteneurs docker : zookeeper et kafka-broker
 
-![image](.jpg)
+![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/RunContainers.png)
 
 * Tester avec Kafka-console-producer et kafka-console-consumer
 
-![image](.jpg)
+![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/KafkaConsoleConsumerWithDocker.png)
 
-![image](.jpg)
+![image](https://github.com/DOUHIChaimae/SpringCloud-Streams-Kafka/blob/master/capture/KafkaConsoleProducerWityhDocker.png)
 
 ## Avec KAFKA & Stpring Cloud Streams
 
